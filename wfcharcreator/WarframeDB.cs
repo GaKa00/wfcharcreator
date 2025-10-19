@@ -5,6 +5,8 @@ using System.Linq;
 namespace wfcharcreator
 {
     internal static class WarframeDB
+
+    //a list of predefined warframes which are later consumed by the SelectWarframe method
     {
         private static List<Warframe> warframes = new List<Warframe>
         {
@@ -63,18 +65,8 @@ namespace wfcharcreator
             }
         };
 
-        // Retrieve all warframes
-        public static List<Warframe> GetAll()
-        {
-            return warframes;
-        }
+       
 
-        //AI helper generated method to get warframe by name
-        public static Warframe? GetByName(string name)
-        {
-            return warframes.FirstOrDefault(w =>
-                w.Name.Equals(name, StringComparison.OrdinalIgnoreCase));
-        }
 
         //AI generated method to select a warframe from the console
         public static Warframe SelectWarframe()

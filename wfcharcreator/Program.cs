@@ -4,8 +4,8 @@
     {
         static void Main(string[] args)
         {
-          
-        
+
+
 
 
             Console.WriteLine("Welcome to the unofficial warframe ttrpg  character creator.");
@@ -31,7 +31,7 @@
             Thread.Sleep(2000);
 
             Console.WriteLine("You will now be assigned your first weapons to exploit in the war for the galaxy.");
-                
+
             playerTenno.warframe.AssignStartingWeapons();
 
             Thread.Sleep(2000);
@@ -42,7 +42,11 @@
 
             playerTenno.DisplayStats();
 
-         
+
+            playerTenno.LevelUp();
+           
+            playerTenno.DisplayStats();
+
 
 
 

@@ -43,8 +43,6 @@ namespace wfcharcreator
         }
 
     
-
-        // --- WEAPONS ---
         public void EquipWeapon(Weapon weapon)
         {
             Weapons.Add(weapon);
@@ -62,23 +60,29 @@ namespace wfcharcreator
 
         public void AllocateStat(string statName, int points)
         {
+            //check if stat was written correctly
             var stat = Stats.FirstOrDefault(s =>
                 s.Name.Equals(statName, StringComparison.OrdinalIgnoreCase));
             if (stat == null)
             {
                 throw new Exception("Stat not found.");
             }
+
+            //check if enough points are available
             if (points > StatPoints)
             {
                 throw new Exception("Not enough stat points available.");
             }
+            //allocate points by increasing stat value and decreasing available points
             stat.Value += points;
             StatPoints -= points;
         }
 
+
+        //Method to allow stats to be allocated via console interaction
         public void AllocateStatsInteractive()
         {
-
+            //while loop to continue until all stat points are allocated
             while ( StatPoints > 0)
             {
                 Console.WriteLine($"\nPoints remaining: {StatPoints}");

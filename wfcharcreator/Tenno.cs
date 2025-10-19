@@ -15,7 +15,7 @@ namespace wfcharcreator
 
         public int StatPoints = 5;
 
-        //AI gave me the idea to use a string array to map die types
+     
         private static readonly string[] DieTypeMap = { "d4", "d6", "d8", "d10", "d12" };
         private const int MaxInvestment = 4;
 
@@ -101,6 +101,8 @@ namespace wfcharcreator
             return "N/A";
         }
 
+
+        //method to award stat points on levelup
         public void AwardStatPoint(int points = 1)
         {
             if (points > 0)
@@ -109,6 +111,8 @@ namespace wfcharcreator
             }
         }
 
+
+        // Handler for leveling up the Tenno.
         public void LevelUp()
         {
 
@@ -124,6 +128,7 @@ namespace wfcharcreator
             Console.WriteLine($"\n*** {Name} Leveled Up! ***");
             Console.WriteLine($"Now Level {Level}.");
             AwardStatPoint(1);
+            AllocateMentalStatsInteractive();
         }
 
 

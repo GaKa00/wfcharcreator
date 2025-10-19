@@ -1,0 +1,38 @@
+﻿
+
+1.
+Vad använde du för AI verktyg?
+
+Jag började med att använda Gemini 2.5 flash , men bytte mot slutet till ChatGPT 5.0.
+
+2. Vad ställde du för frågor till AI verktyget?
+Jag började med att fråga om ideer för hur jag skulle kunan allokera olika tärningsstorlekar baserade på Tenno Classens "Mental Stats
+Då den visade mig en metod inkluderade Math.Clamp för att kunna placera värdena.
+
+Jag frågade sedan hur jag skulle kunna skapa en Warframe Databas, som man kunde välja olika Warframes ifrån, istället för att behöve skapa massa nya instanser  i program.cs.
+
+Vid detta steg bytte jag till ChatGPT 5.0, då Gemini 2.5   hakade uppsig på att skriva allt i samma fil, vilket var något jag ej önskade.
+
+3. Hur använde du dessa svar i ditt projekt?
+ Jag koperade över vissa metoder, jag fick av AI'n, och skrev om dem för att kunna passa in i det arbetsflöde jag tänkt.
+ Dock när det kom till WarframeDB.cs så, bad jag chatgpt generara denna fil, då jag kände att jag hade en ide över hur den skulle se ut, men hade problem med att få rätt syntax.
+
+ 4. Vilka ändringar gjorde du  jamfört med AIns förslag?
+ Jag valde att bryta ut stat och weapon klasserna till egna filer, för att hålla koden mer organiserad.
+
+ Jag gjorde även valet att skapa en egen generatestarterweapons metod, då jag såg det som överflödigt att skapa en egen weapon databas, då jag redan hade  relativt komplex kod, och inte ville 
+ göra det mer komplicerat än nödvändigt.
+
+ Jag bytte även ifrån Dictionary till List för att hantera Warframes, då jag kände mig mer bekväm med lists, och märkte att jag började tappa greppet när AI'n spann på om Dictionarys.
+
+
+ 5. Refklektion över AI verktyget
+
+ Jag ser AI som att bra verktyg för att få ideer, samt skriva simplare kod snuttar för att snabba på arbetet som görs.
+ Dock ser jag snabbt att Ai kan ha tendenser att fastna i sina egna mönster, vilket kan leda till att man skriver prompt efter prompt och får ut samma resultat.
+ När detta sker, så blir det bäst att man själv tar över, och skriver koden helt själv, även om et betyder att man måste ta bort mycket av den Ai generade koden.
+
+ Man fick trots allt en aning på hur problemet kunde lösas, vilket hjälpte en att skapa en lösning själv.
+
+ Jag ser att AI kan vara en bra konversations parnter gällande kod,men att man då MÅSTE förtydliga att den inte ska skriva någon kod alls, utan endast diskutera ideer med en.
+
